@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>display Locations</title>
+    <link th:href="@{/styles/displayLocation.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+    <a href="#">Location-Service</a>
+    <ul>
+        <li><a href="showCreate">Add Location</a></li>
+        <li><a href="displayLocations">View-Locations</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#">Signup</a>
+</nav>
+<h2 id="location" th:text="${message}" ></h2>
+
+</body>
+</html>

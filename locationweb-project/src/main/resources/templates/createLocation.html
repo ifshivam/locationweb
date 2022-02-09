@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>create location</title>
+     <link th:href="@{/styles/createLocation.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+    <a href="#">Location-Service</a>
+    <ul>
+        <li><a href="showCreate">Add Location</a></li>
+        <li><a href="displayLocations">View-Locations</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#">Signup</a>
+</nav>
+<main>
+<form action="saveLoc" method="post">
+    <pre>
+    id:<input type="text" name="id"/>
+    code:<input type="text" name="code"/>
+    name:<input type="text" name="name"/>
+    type: urban<input type="radio" name="type" value="URBAN"/>
+    rural<input type="radio" name="type" value="RURAL"/>
+    <input type="submit" value="save"/>
+    </pre>
+</form>
+</main>
+</body>
+</html>

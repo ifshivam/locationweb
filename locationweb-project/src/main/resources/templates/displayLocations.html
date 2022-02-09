@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>display Locations</title>
+    <link th:href="@{/styles/displayLocation.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+    <a href="#">Location-Service</a>
+    <ul>
+        <li><a href="showCreate">Add Location</a></li>
+        <li><a href="displayLocations">View-Locations</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#">Signup</a>
+</nav>
+<h2>Locations:</h2>
+<table>
+    <tr>
+        <th>id</th>
+        <th>code</th>
+        <th>name</th>
+        <th>type</th>
+        <th>Remove</th>
+        <th>Update</th>
+    </tr>
+    <tr th:each="location:${locations}">
+        <td th:text="${location.id}"></td>
+        <td th:text="${location.code}"></td>
+        <td th:text="${location.name}"></td>
+        <td th:text="${location.type}"></td>
+        <td ><a id="delete" th:href="@{'deleteLocation?id='+${location.id}}">Delete</a></td>
+        <td ><a id="edit" th:href="@{'showUpdate?id='+${location.id}}">Edit</a></td>
+    </tr>
+</table>
+</body>
+</html>
